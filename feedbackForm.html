@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBack Form</title>
+</head>
+<body>
+    <br>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Personal Information:</legend>
+            <label for="fullname">First & Last Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter Your Full Name" required maxlength="35">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="email@email.com" required>
+
+            <br>
+            <br>
+
+            <label for="password">PassWord:</label>
+            <input type="password" id="password" name="password" placeholder="PassWord > 8 characters" required minlength="8">
+            <input type="submit">
+
+
+        </fieldset>
+            
+        <br>
+
+        <fieldset>
+            <legend>FeedBack Details:</legend>
+            <label for="feedback">FeedBack Category:</label>
+
+            <select id="category" name="category">
+                <option value="general" selected>General Feebback</option>
+                <option value="bug">Bug-Error Report</option>
+                <option value="feature">REquested Features?</option>
+            </select>
+
+            <label>Preferred Contact:</label>
+            <input type="radio" id="contact-email" name="contact-method" value="email" checked>
+            <label for="contact-email">Email</label>
+            <input type="radio" id="contact-phone" name="contact-phone" value="phone">
+            <label for="contact-phone">Phone</label>
+
+            <br>
+            <br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="30" placeholder="write message here!"></textarea>
+
+            <input type="submit">
+
+        </fieldset>
+
+    </form>
+
+
+
+</body>
+</html>
